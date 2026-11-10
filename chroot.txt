@@ -1,0 +1,10 @@
+lsblk -f
+
+sudo mount -o subvol=root /dev/DRIVENAME /mnt #Fedora Linux
+sudo mount /dev/DRIVENAME /mnt #Other Linux
+
+sudo mount --bind /dev /mnt/dev
+sudo mount --bind /proc /mnt/proc
+sudo mount --bind /sys /mnt/sys
+
+sudo chroot /mnt
